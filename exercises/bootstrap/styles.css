@@ -1,0 +1,29 @@
+.pink{
+    background-color: #F5C6D6;
+    border: 5px solid white;
+    height: 175px;
+}
+
+.purple{
+    background-color: #EE2E84;
+    border: 5px solid white;
+    height: 175px;
+}
+
+.blue{
+    background-color: dodgerblue;
+    border: 5px solid white;
+    height: 175px;
+}
+
+.green{
+    background-color: yellowgreen;
+    border: 5px solid white;
+    height: 175px;
+}
+
+.orange{
+    background-color: orange;
+    border: 5px solid white;
+    height: 175px;
+}

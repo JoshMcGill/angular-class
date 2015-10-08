@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Todays Date</title>
+    </head>
+    <body>
+        <p>Today is:</p><span id="day"></span>
+        <p>Current time is:</p><span id="time"></span>
+    
+    <script>
+        var date = new Date();
+        var days = date.getDay();
+        var time = date.getTime();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var mill = date.getSeconds();
+        var fulltime = hours + ":" + minutes + ":" + mill;
+        var fullDays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        var time2 = date.toLocaleTimeString();
+        
+        var changedDays = document.getElementById('day').innerHTML = fullDays[days];
+        document.getElementById('time').innerHTML = fulltime;
+        console.log("Todays day is: " + changedDays);
+        console.log("The current time is: " + fulltime);
+        console.log("The current time is: " + time2);
+    </script>
+    </body>
+</html>

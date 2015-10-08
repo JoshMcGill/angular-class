@@ -1,0 +1,66 @@
+body {
+    margin: 0px;
+}
+
+#header h1 {
+    margin: 0px;   
+}
+
+#content ul {
+    margin: 0px;
+    list-style: none;
+}
+
+#footer p {
+    margin: 1px 0px 1px 5px;   
+}
+
+#header {
+    margin:auto;
+    text-align: center;
+    width:100%;
+    background-color: red;
+    color: yellow;
+}
+
+#content {
+    background-color: yellow;
+    list-style-type: none;
+    text-shadow: 1px 1px grey;
+    width: 100%;
+    height: 460px;
+}
+
+#content img {
+    width: 75px;
+    height: 75px;
+}
+
+#content h1 {
+    margin: 0px;
+}
+
+#footer {
+    width:100%;
+    background-color: dodgerblue;
+    color: red;
+    margin: 0px;
+    text-shadow: 1px 1px black;
+    height: 100%;
+}
+
+#baddies {
+    width: 48%;
+    text-align: center;
+    float: left;
+}
+
+#totalCost h1 {
+    margin: 0px;
+}
+
+#totalCost  {
+    float: right;
+    width: 48%;
+    text-align: center;
+}
