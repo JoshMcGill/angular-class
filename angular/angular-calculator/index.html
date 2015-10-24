@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calculator">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Calculator</title>
+</head>
+<body>
+   <h2>Addition Calculator</h2>
+    <div ng-controller = "mainController">
+    
+       <input ng-model="number.number1"> + <input ng-model="number.number2"> = <label>{{ sumTotal }}</label>
+       <br>
+       <br>
+       <button ng-click = "sum(number.number1, number.number2)">Add inputs</button>
+    </div>
+        
+    <br>
+    
+    <h2>Multiplication Calculator</h2>
+    <div ng-controller = "secondController">
+    
+       <input ng-model="number.number1"> x <input ng-model="number.number2"> = <label>{{ sumTotal }}</label>
+       <br>
+       <br>
+       <button ng-click = "sum(number.number1, number.number2)">Multiply inputs</button>
+        
+        
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='uglyThings'>
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly Things</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+   <div ng-controller="MainController" class="container">
+      <div class="submit top row">
+        <div class="col-xs-12"><h1>Ugly Thing Creator</h1></div>
+          <div class="col-xs-12 col-sm-4"><input ng-model="uglything.title" class="form-control"></div>
+          <div class="col-xs-12 col-sm-4"><input ng-model="uglything.description" class="form-control"></div>
+          <div class="col-xs-12 col-sm-4"><input ng-model="uglything.url" class="form-control"></div>
+          <div class="submit col-xs-12"><button class="btn" ng-click="createUglyThing();">Submit</button></div>
+      </div>
+      <div class="row">
+          <div class="uglything" ng-repeat="thing in yourUglyThing track by $index">
+              <h1>{{ thing.title }}</h1>
+              <p>{{ thing.description }}</p>
+              <img src="{{ thing.url }}">
+          </div>
+      </div>
+   </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

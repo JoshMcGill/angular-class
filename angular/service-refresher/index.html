@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Cartoon">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Service Refresher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container" ng-controller="MainController">
+        <div class="background row">
+            <div class="col-xs-12">
+                <h1>Cartoon Services</h1>
+            </div>
+            <div class="padding col-xs-12 col-sm-4">
+                <input class="form-control" ng-model="title">
+            </div>
+            <div class="padding col-xs-12 col-sm-4">
+                <input class="form-control" ng-model="description">
+            </div>
+            <div class="padding col-xs-12 col-sm-4">
+                <input class="form-control" ng-model="url">
+            </div>
+            <div class="padding col-xs-12">
+                <button class="btn btn-primary" ng-click="createCartoon()">Submit</button>
+            </div>
+        </div>
+        <div class="content row" ng-repeat="cartoon in cartoonArray track by $index">
+            <div>
+                <h1>{{ cartoon.title }}</h1>
+                <h5>{{ cartoon.description }}</h5>
+                <img src="{{ cartoon.url }}">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services/cartoonService.js"></script>
+</body>
+
+</html>

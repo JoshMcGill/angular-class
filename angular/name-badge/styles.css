@@ -1,0 +1,13 @@
+#button{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.form-control{
+     margin-bottom: 10px;   
+}
+
+.badge{
+    color: grey;
+    background-color: lightblue;
+}

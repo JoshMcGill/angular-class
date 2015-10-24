@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='nameBadge'>
+<head>
+    <meta charset="UTF-8">
+    <title>Name Badge</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div ng-controller="MainController">
+       <div class="container">
+           <div class="badge row">
+               <div class="col-xs-12"><h1>Badge Creator</h1></div>
+               <div class="col-xs-12 col-sm-6"><input class="form-control" ng-model="badge.firstName"></div>
+               <div class="col-xs-12 col-sm-6"><input class="form-control" ng-model="badge.lastName"></div>
+               <div class="col-xs-12 col-sm-6"><input class="form-control" ng-model="badge.email"></div>
+               <div class="col-xs-12 col-sm-6"><input class="form-control" ng-model="badge.birthPlace"></div>
+               <div class="col-xs-12 col-sm-6"><input class="form-control" ng-model="badge.phone"></div>
+               <div class="col-xs-12 col-sm-6"><input class="form-control" ng-model="badge.food"></div>
+               <div class="col-xs-12"><input class="form-control" ng-model="badge.about"></div>
+               <div class="col-xs-12"><button id="button" class="button btn-primary" ng-click="createBadge();">Submit</button></div>
+           </div>
+       </div>
+       <br><br><br>
+        <div class="container">
+           <div class="badge row">
+               <div class="col-xs-12"><h1>{{ badge.firstName }} {{ badge.lastName }}</h1></div>
+               <div class="col-xs-12 col-sm-6"><span>First Name:</span><input class="form-control" ng-model="badgeName"></div>
+               <div class="col-xs-12 col-sm-6"><span>Last Name:</span><input class="form-control" ng-model="badgeLast"></div>
+               <div class="col-xs-12 col-sm-6"><span>Email Address:</span><input class="form-control" ng-model="badgeEmail"></div>
+               <div class="col-xs-12 col-sm-6"><span>Birthplace:</span><input class="form-control" ng-model="badgeBirth"></div>
+               <div class="col-xs-12 col-sm-6"><span>Phone Number:</span><input class="form-control" ng-model="badgePhone"></div>
+               <div class="col-xs-12 col-sm-6"><span>Favorite Food:</span><input class="form-control" ng-model="badgeFood"></div>
+               <div class="col-xs-12"><span>About Me:</span><input class="form-control" ng-model="badgeAbout"></div>
+           </div>
+       </div>
+       
+   </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

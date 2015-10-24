@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='killApp'>
+<head>
+    <meta charset="UTF-8">
+    <title>Kills</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div ng-controller="MainController">
+        <div ng-repeat="kill in player.kills">
+            <h1>Name: {{ kill.handle }}</h1>
+            <h2>Rank: {{ kill.rank }}</h1>
+            <h2>Clans: <span ng-repeat="name in kill.clan"> {{ name }}, </span> </h2>
+            
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

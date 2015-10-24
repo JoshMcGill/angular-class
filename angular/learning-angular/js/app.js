@@ -8,5 +8,8 @@ myApp.controller('MainController', function($scope){
         siblings: 3
     }
     
+    $scope.changeName = function() {
+        $scope.person.name = "Josh McGill";    
+    }
     
 });

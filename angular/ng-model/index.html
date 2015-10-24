@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Ng-Model</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    
+</head>
+<body>
+    <div ng-controller="MainController" class = "well">
+        
+        <input ng-model="name1">: <label>Twitter.com/{{ name1 }}</label>
+        <br>
+        <input ng-model="name2">: <label>LinkedIn/{{ name2 }}</label>
+        <br>
+        <input ng-model="name3">: <label>Instagram/{{ name3 }}</label>
+        
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

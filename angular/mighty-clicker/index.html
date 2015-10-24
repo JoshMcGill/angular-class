@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MightyClicker">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mighty Clicker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div ng-controller="MainController" class="well">
+        <h1>{{ redCount }}</h1>
+        <button ng-click="reduceRed(redCount)" class="btn btn-danger">Red Button</button>
+        <h1>{{ blueCount }}</h1>
+        <button ng-click="reduceBlue(blueCount)" class="btn btn-primary">Blue Button</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

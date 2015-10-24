@@ -1,0 +1,25 @@
+.background{
+    padding: 10px;
+    text-align: center;
+    background-color: coral;
+}
+
+.padding{
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content{
+    text-align: center;
+    background-color: dodgerblue;
+}
+
+.content img{
+    width: 250px;
+    margin: 10px;
+}
+
+.container{
+ margin-bottom: 10px;   
+}
