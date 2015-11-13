@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MovieApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Database</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">
+
+    <div class="container-fluid background">
+        <div class="row header">
+            <div class="col-xs-12">
+                <h1>Movie Search</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row search form-group">
+                <form ng-submit="search()">
+                    <!--This lets you submit by hitting enter key-->
+                    <label>Title:</label>
+                    <input class="form-control" type="text" ng-model="titleSearch" placeholder="Enter title to search for">
+
+                    <label>Year:</label>
+                    <input class="form-control" type="text" ng-model="yearSearch" placeholder="Enter year of the movie">
+
+                    <label>Type:</label>
+                    <select class="form-control" name="type" ng-model="typeSearch">
+                        <option value="movie">Movie</option>
+                        <option value="series">Series</option>
+                        <option value="episode">Episode</option>
+                        <option value="game">Game</option>
+                    </select>
+
+                    <button class="btn btn-info btn-large" ng-click="search()">Search</button>
+
+                </form>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 movies" ng-repeat="movie in searchResults">
+                <h4>{{ movie.Title }}</h4>
+                <img ng-src="{{movie.Poster}}">
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

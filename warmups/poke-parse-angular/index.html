@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PokeParser">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Poke parser Angular</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div ng-controller="PokeController" class="well">
+       <p ng-repeat="mon in pokemon">Name: {{ mon.name }}</p>
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

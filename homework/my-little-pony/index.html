@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Brony">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Little Brony</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <!-- Horizontal Scroll -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-horizon/bootstrap-horizon.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container-fluid" ng-controller="MainController">
+        <div class="row header">
+            <div class="col-xs-12">
+                <h1><span class="glyphicon glyphicon-heart"></span> My Little Ponies <span class="glyphicon glyphicon-heart"></span></h1>
+            </div>
+        </div>
+        <div class="row pre-ponies">
+            <div class="col-xs-12">
+                <h1>Our Favorite Ponies!</h1>
+            </div>
+        </div>
+        <div class="row row-horizon pre-ponies">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 pre-pony" ng-repeat="pony in prePonies">
+                <h1>{{ pony.ponyName }}</h1>
+                <img ng-src="{{pony.imgUrl}}" </h3>
+            </div>
+        </div>
+        <div class="row fav-ponies">
+            <div class="col-xs-12">
+                <h1>Fan Favorite Ponies!</h1>
+            </div>
+        </div>
+        <div class="row row-horizon fav-ponies">
+            <div class="col-xs-7 col-sm-4 col-md-3 col-lg-3 fav-pony" ng-repeat="pony in favoritePonies">
+                <h3>{{ pony.ponyName }}</h3>
+                <p>User Name:</p>
+                <h4>{{ pony.userName }}</h4>
+                <img ng-src="{{pony.imgUrl}}">
+                <button class="btn btn-danger btn-lg" ng-click="delete(pony)">Delete</button>
+                <button class="btn btn-primary btn-lg" ng-click="changeVideo(pony.youtube)">Change Youtube</button>
+            </div>
+        </div>
+        <div class="row fav-ponies">
+            <div class="col-xs-12"><h3>Currently Selected Video</h3></div>
+            <div class="col-xs-12 embed-responsive embed-responsive-16by9 videoplayer">
+                <youtube-video class="embed-responsive-item" video-id="theBestVideo"></youtube-video>
+            </div>
+            <div class="col-xs-12 button">
+                <button class="btn btn-info btn-sm" ng-click="addPonyOnOff = !addPonyOnOff">Add Your Favorite Pony</button>
+            </div>
+        </div>
+        <div class="row add-pony" ng-hide="addPonyOnOff===true">
+            <div class="col-xs-12 col-sm-3">
+                <label>Pony Name:</label>
+                <input class="form-control" ng-model="name">
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <label>Link to Image of Pony:</label>
+                <input class="form-control" ng-model="image">
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <label>Your User Name:</label>
+                <input class="form-control" ng-model="userName">
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <label>End of Youtube link:</label>
+                <input class="form-control" ng-model="youtube">
+            </div>
+            <div class="col-xs-12">
+                <button class="btn btn-primary btn-sm" ng-click="addFavoritePony(name, image, userName, youtube)">Add Pony</button>
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="col-xs-12">
+                <p>Josh McGill</p>
+                <p>Created 2015</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--   Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="main.js"></script>
+    <script src="services/modelManager.js"></script>
+    <script src="services/modelService.js"></script>
+    <!-- Include YT library and this directive -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="node_modules/angular-youtube-embed/src/angular-youtube-embed.js"></script>
+</body>
+
+</html>

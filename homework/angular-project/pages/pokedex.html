@@ -1,0 +1,19 @@
+<div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main">
+    <h1 class="page-header">PokeDex</h1>
+</div>
+<div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Number:</th>
+                <th>Pokemon Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="pokemon in pokedexPokemon">
+                <td>{{pokemon.pokedexNum}}</td>
+                <td>{{pokemon.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Directives</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="DirectiveController">
+
+    <div class="container">
+        <div class="row">
+          
+           <contact-card class="col-md-4" ng-repeat="person in addressBook"></contact-card>
+           
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

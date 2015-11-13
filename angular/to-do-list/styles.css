@@ -1,0 +1,74 @@
+.header{
+    background-color: #179DB2;
+    text-align: center;
+}
+
+.newToDo{
+    background-color: #54E7FF;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.newToDo p{
+     margin-top: 5px;   
+}
+
+.newToDoHeader{
+     text-align: center; 
+}
+
+/*
+.newtodobutton{
+     margin-top: 20px;   
+}
+*/
+
+.allToDo{
+    background-color: #FF923A;
+    text-align: center;
+}
+
+.listItems{
+/*    border-top: 1px solid black;*/
+    border-bottom: 1px solid black;
+    height: 50px; 
+    padding-right:10px;
+    padding-left:10px;
+}
+
+.listItems button{
+    margin-top: 10px;
+    text-align: center;
+}
+.listItems p{
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.listItems span{
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.listItems input{
+     margin-top: 20px;
+}
+
+
+
+.listDescriptor{
+    background-color: #B25205;
+    border: 1px solid black;
+    height:auto;
+    margin-bottom: 0px;
+}
+
+.listDescriptor h3{
+    
+}
+
+.check{
+    padding-top: 15px;    
+}

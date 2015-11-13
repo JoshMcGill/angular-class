@@ -1,0 +1,86 @@
+<div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main">
+    <h1 class="page-header">Search Pokemon</h1>
+</div>
+<div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main col-lg-6">
+    <div class="input-group">
+        <input ng-model="searchingPokemon" uib-typeahead="pokemon for pokemon in allPokeNames | filter:$viewValue | limitTo:8"type="text" class="form-control" placeholder="Search Pokemon Name...">
+        <span class="input-group-btn">
+        <button ng-click="searchPokemon(searchingPokemon)" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+      </span>
+    </div>
+    <hr>
+</div>
+
+<div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 col-lg-6 pokemon">
+    <img ng-src="{{currentPokemonSpriteImg}}">
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{ currentPokemon.name }}</th>
+                <th>Stat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PokeDex ID:</td>
+                <td>{{currentPokemon.pkdx_id}}</td>
+            </tr>
+            <tr>
+                <td>Types:</td>
+                <td><span ng-repeat="type in currentPokemon.types"><a href="#/types"> {{type.name}} </a></span></td>
+            </tr>
+            <tr>
+                <td>Attack:</td>
+                <td>{{currentPokemon.attack}}</td>
+            </tr>
+            <tr>
+                <td>Defense:</td>
+                <td>{{currentPokemon.defense}}</td>
+            </tr>
+            <tr>
+                <td>Health Points:</td>
+                <td>{{currentPokemon.hp}}</td>
+            </tr>
+            <tr>
+                <td>Special Attack:</td>
+                <td>{{currentPokemon.sp_atk}}</td>
+            </tr>
+            <tr>
+                <td>Special Defense:</td>
+                <td>{{currentPokemon.sp_def}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Abilities</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="ability in currentPokemon.abilities">
+                <td>Ability:</td>
+                <td>{{ability.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Moves</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="move in currentPokemon.moves">
+                <td>Move:</td>
+                <td>{{move.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

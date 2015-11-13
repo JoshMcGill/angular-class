@@ -1,0 +1,148 @@
+body {
+    background-color: pink;
+}
+
+.header {
+    text-align: center;
+    background-color: #BE1E79;
+    color: white;
+    border-bottom: 2px solid #EF4E91;
+}
+
+.header span{
+    color: #EF4E91;
+}
+
+.header h1 {
+    margin-bottom: 20px;
+}
+
+.pre-ponies {
+    text-align: center;
+    background-color: #F8B9CE;
+    padding-bottom: 10px;
+    color: white;
+/*    border-bottom: 2px solid #BE1E79;*/
+}
+
+.pre-ponies img {
+    height: 250px;
+    width: 100%;
+}
+
+.pre-ponies h1 {
+    margin-top: 10px;
+}
+
+.pre-pony {
+    height: 375px;
+    border: 5px solid #F8B9CE;
+    background-color: #74CDF9;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.pre-pony h1 {
+    margin-top: 0px;
+}
+
+.fav-ponies {
+    text-align: center;
+    background-color: #EF4E91;
+    color: white;
+}
+
+.fav-pony {
+    border: 5px solid #EF4E91;
+    background-color: #74CDF9;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    height: auto;
+}
+
+.fav-pony span{
+    margin: 0px;   
+}
+.fav-pony img {
+    height: 250px;
+    width: 100%;
+}
+
+.fav-pony h3{
+     margin-top: 0px;   
+}
+
+.fav-pony h4{
+     margin-top: 0px;   
+}
+
+.fav-pony p{
+    margin-bottom: 0px;  
+    margin-top: 0px;
+    color: black;
+}
+
+.fav-pony button {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.add-pony {
+    background-color: #74CDF9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.add-pony button {
+    margin-top: 10px;
+    background-color: #EF4E91;
+    border-color: #EF4E91;
+}
+
+.add-pony button:hover {
+    background-color: #BE1E79;
+    border-color: #BE1E79;
+}
+
+.add-pony button:active {
+    background-color: #BE1E79;
+    border-color: #BE1E79;
+}
+
+.add-pony button:visited {
+    background-color: #BE1E79;
+    border-color: #BE1E79;
+}
+
+.button {
+    padding: 10px;
+    text-align: center;
+}
+
+.footer{
+    height: 75px;
+    background-color: #BE1E79;
+    color: white;   
+}
+
+.footer p{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    background-color: #BE1E79;
+    color: white;
+    margin: 0px;
+}
+
+.videoplayer{
+    margin-right: 10px;   
+}
+
+.exit{
+    position: relative;
+    top: 100%;
+}
+

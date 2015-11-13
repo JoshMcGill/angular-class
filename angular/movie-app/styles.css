@@ -1,0 +1,22 @@
+.movies{
+    text-align: center;
+    background-color: beige;
+}
+
+.background{
+    background-color: beige;
+}
+
+.header{
+    background-color: deepskyblue;
+    text-align: center;
+}
+
+.search{
+    background-color: skyblue;
+    padding: 15px;
+}
+
+.search button{
+    margin-top: 15px;   
+}

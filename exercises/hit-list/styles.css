@@ -1,0 +1,36 @@
+body {
+    background-color: white;
+}
+
+.header {
+    text-align: center;
+    background-color: deepskyblue;
+}
+
+.body {
+    padding 50px;
+    margin-top: 20px;
+}
+
+.maincontent {
+    width: 200px;
+    height: 300px;
+    padding: 0px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+}
+
+.maincontent h3 {
+    width: 200px;
+    background-color: darkslategrey;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+}

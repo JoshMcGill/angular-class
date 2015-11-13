@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ToDoList">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div ng-controller="MainController">
+       <h1>Star Wars: {{  movieOne.title }}</h1>
+        <h3>{{ movieOne.opening_crawl }}</h3>
+        <h2>Directed By </h2>
+        <h1>{{ movieOne.director }}</h1>
+        <h2>Produced By</h2>
+        <h1> {{ movieOne.producer }}</h1>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
