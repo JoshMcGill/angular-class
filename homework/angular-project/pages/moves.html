@@ -1,20 +1,60 @@
 <div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main">
-    <h1 class="page-header">Moves</h1>
+    <h1 id="current-move" class="page-header">Moves</h1>
 </div>
 
+<div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main col-lg-6">
+    <div class="input-group">
+        <input ng-model="searchingMoves" uib-typeahead="move for move in allMoveNames | filter:$viewValue | limitTo:10" type="text" class="form-control" placeholder="Search Move Name...">
+        <span class="input-group-btn">
+        <button ng-click="searchMoves(searchingMoves)" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+        </span>
+    </div>
+    <hr>
+</div>
 
-<div class="col-xs-6 col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main">
+<div class="col-xs-12 col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{ currentMove.name }}:</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Description:</td>
+                <td>{{currentMove.description}}</td>
+            </tr>
+            <tr>
+                <td>Accuracy:</td>
+                <td>{{currentMove.accuracy}}</td>
+            </tr>
+            <tr>
+                <td>PP::</td>
+                <td>{{currentMove.pp}}</td>
+            </tr>
+            <tr>
+                <td>Power:</td>
+                <td>{{currentMove.power}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="col-xs-12 col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main">
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>Move:</th>
-                <th>Pokemon Name</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="pokemon in pokedexPokemon">
-                <td>{{pokemon.pokedexNum}}</td>
-                <td>{{pokemon.name}}</td>
+            <tr ng-repeat="move in allMoveNames track by $index">
+                <td>
+                    <a ng-click="scrollTo('current-move')">
+                        <button class="btn btn-primary" ng-click="searchMoves(move)">{{move}}</button>
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>
