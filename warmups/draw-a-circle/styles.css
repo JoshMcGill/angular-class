@@ -1,0 +1,7 @@
+#myCanvas{
+    width: 300px;
+    height: 150px;
+    border: 1px solid red;
+    color: red;
+    background-color: red;
+}

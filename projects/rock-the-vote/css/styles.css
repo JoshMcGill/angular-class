@@ -1,0 +1,47 @@
+.home{
+    background-color: lightskyblue;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    
+}
+
+.home h4{
+    margin-top: 0px;   
+}
+
+.home h1{
+    padding:0px;
+    margin-top:15px;
+}
+
+.posts{
+    margin-top: 15px;
+    padding: 5px;
+    background-color: white;
+}
+
+.posts p{
+    text-indent: 15px;
+
+}
+
+.buttons{
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: ;
+    
+}
+
+.buttons button{
+    margin:0px;
+}
+
+.new-comment{
+    margin-top: 10px;   
+}
+
+.navbar-fixed-bottom, .navbar-fixed-top, .navbar-static-top{
+    margin-bottom: 0px;
+}

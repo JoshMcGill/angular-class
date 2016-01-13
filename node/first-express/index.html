@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngModule">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ng-Model</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div ng-controller="MainController" class="container back">
+        <div class="row">
+            <div class="col-xs-12 header">
+                <h1>BOUNTY HUNTER</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 center">
+                <h1>Add/Change Bounties</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <label>First Name:</label>
+                <input ng-model="firstName" type="text" class="form-control" placeholder="First Name here...">
+                <label>Last Name:</label>
+                <input ng-model="lastName" type="text" class="form-control" placeholder="Last Name here...">
+                <label>Living:</label>
+                <input ng-model="living" type="text" class="form-control" placeholder="true or false...">
+                <label>Reward:</label>
+                <input ng-model="reward" type="text" class="form-control" placeholder="amount of money...">
+                <label>Alliance:</label>
+                <input ng-model="alliance" type="text" class="form-control" placeholder="sith or jedi...">
+                <br>
+                <button class="btn btn-success" ng-click="addBounty()">Add New Bounty</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12 center">
+                <h1>BOUNTIES</h1>
+            </div>
+        </div>
+        <div ng-repeat="bounty in bounties" class="col-xs-12 col-md-6">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Info</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>First Name:</td>
+                        <td>{{ bounty.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td>{{ bounty.lastName }}</td>
+                    </tr>
+                    <tr>
+                        <td>Alive:</td>
+                        <td>{{ bounty.living }}</td>
+                    </tr>
+                    <tr>
+                        <td>Reward:</td>
+                        <td>{{ bounty.bountyAmt | currency}}</td>
+                    </tr>
+                    <tr>
+                        <td>Alliance:</td>
+                        <td>{{ bounty.type }}</td>
+                    </tr>
+                    <tr>
+                        <td>Edit:</td>
+                        <td>
+                            <button ng-click="editBounty(bounty.id)" class="btn btn-sm btn-info">Change</button>
+                            <button ng-click="copyBounty(bounty.name, bounty.lastName, bounty.living, bounty.bountyAmt, bounty.type)" class="btn btn-sm btn-primary">Copy to Form</button>
+                            <button ng-click="deleteBounty(bounty.id)" class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

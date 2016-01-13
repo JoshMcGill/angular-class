@@ -1,0 +1,96 @@
+<form class="form-search">
+    <h2 class="form-signin-heading big-header2">Search A Summoner</h2>
+    <div class="input-group">
+        <input ng-model="summonerName" type="text" class="form-control" placeholder="summoner name...">
+        <span class="input-group-btn">
+            <button ng-click="search()" class="btn btn-default btn-success" type="submit">Go!</button>
+        </span>
+    </div>
+    <!-- /input-group -->
+</form>
+
+
+
+<div ng-show="showData" class="games">
+    <div class="media background-blue inset-shadow">
+        <div class="media-left">
+            <img class="media-object" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/profileicon/{{ summonerInfo.profileIconId }}.png" alt="Generic placeholder image">
+        </div>
+        <div class="media-body">
+            <h3 class="media-heading">{{ summonerInfo.name }}</h3>
+            <h5 class="media-heading"> Summoner Level: {{ summonerInfo.summonerLevel }} </5>
+        <h5 class="media-heading">{{ rankedInfo[0].queue }}: {{ rankedInfo[0].name }}, {{ rankedInfo[0].tier }}: {{ rankedInfo[0].entries[0].division }}</h5>
+            <h5 class="media-heading">{{ rankedInfo[2].queue }}: {{ rankedInfo[2].name }}, {{ rankedInfo[2].tier }}: {{ rankedInfo[0].entries[0].division }}</h5>
+            <h5 class="media-heading">{{ rankedInfo[1].queue }}: {{ rankedInfo[1].name }}, {{ rankedInfo[1].tier }}: {{ rankedInfo[1].entries[0].division }}</h5>
+        </div>
+        <div class="media-body">
+            <h3 class="media-heading">{{ playerStats[12].playerStatSummaryType }} Wins: {{ playerStats[12].wins }}</h3>
+            <h5 class="media-heading">{{ playerStats[13].playerStatSummaryType }} Wins: {{ playerStats[13].wins }}</h5>
+            <h5 class="media-heading">{{ playerStats[9].playerStatSummaryType }} Wins: {{ playerStats[9].wins }}</h5>
+            <h5 class="media-heading">{{ playerStats[12].playerStatSummaryType }} Champions Killed: {{ playerStats[12].aggregatedStats.totalChampionKills  }}</h5>
+            <h5 class="media-heading">{{ playerStats[12].playerStatSummaryType }} Turrets Destroyed: {{ playerStats[12].aggregatedStats.totalTurretsKilled  }}</h5>
+        </div>
+    </div>
+</div>
+
+
+<div ng-show="showData" class="row background-blue games">
+    <div class="col-xs-12 col-md-8">
+        <h1 class="big-header">Recent Games</h1>
+
+        <div class="game" ng-repeat="game in gameList">
+            <div class="inset-shadow" ng-style="set_color(game.stats.win)">
+                <div class="media games">
+                    <div class="media-left">
+                        <img class="media-object" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{ game.image }}" alt="Generic placeholder image">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{ game.gameMode }}</h3>
+                        <h5 class="media-heading">Kills: {{ game.stats.championsKilled }}</h5>
+                        <h5 class="media-heading">Deaths: {{ game.stats.numDeaths }}</h5>
+                        <h5 class="media-heading">Assists: {{ game.stats.assists }}</h5>
+                        <h5 class="media-heading">Largest Multi Kill: {{ game.stats.largestMultiKill }}</h5>
+                    </div>
+                    <div class="media-body">
+                        <div class="items media-right">
+                            <div>
+                                <img class="" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/item/{{ game.stats.item0 }}.png" alt="No Item">
+                                <img class="" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/item/{{ game.stats.item1 }}.png" alt="No Item">
+                                <img class="" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/item/{{ game.stats.item2 }}.png" alt="No Item">
+                            </div>
+                            <div>
+                                <img class="" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/item/{{ game.stats.item3 }}.png" alt="No Item">
+                                <img class="" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/item/{{ game.stats.item4 }}.png" alt="No Item">
+                                <img class="" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/item/{{ game.stats.item5 }}.png" alt="No Item">
+                            </div>
+                        </div>
+                        <div class="items media-right">
+                            <img class="" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/item/{{ game.stats.item6 }}.png" alt="No Item">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <h1 class="big-header">Game Mode Stats</h1>
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Game Mode</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Kills</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="stat in playerStats | orderBy:'-wins'">
+                    <td>{{ stat.playerStatSummaryType }}</td>
+                    <td>{{ stat.wins }}</td>
+                    <td>{{ stat.losses }}</td>
+                    <td>{{ stat.aggregatedStats.totalChampionKills }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

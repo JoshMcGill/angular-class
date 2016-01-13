@@ -1,0 +1,55 @@
+<div class="container home">
+    <div class="row">
+        <div class="col-xs-12 header">
+            <h1>Create New Post</h1>
+        </div>
+    </div>
+    <div class="row new-post">
+        <form class="form-horizontal">
+            <div>
+                <label>Name:</label>
+                <input ng-model="name" class="form-control" type="text" placeholder="Name here...">
+                <label>Message:</label>
+                <textarea ng-model="message" class="form-control" type="text" placeholder="Type Post Here..."></textarea>
+                <br>
+                <button class="btn btn-md btn-primary" ng-click="sendIssue()">Submit</button>
+                <br>
+                <hr>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Forum</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-repeat="issue in issues | orderBy:'-upvotes'">
+            <div class="col-xs-12 posts">
+                <h4>{{ issue.name }}:</h4>
+                <p>{{ issue.message }}</p>
+            </div>
+            <div class="col-xs-3 buttons">
+                <button ng-click="upvote(issue._id)" class="btn btn-sm btn-success" aria-label="Left Align"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> {{ issue.upvotes }}</span></button>
+                <button ng-click="downvote(issue._id)" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"> {{ issue.downvotes }}</span></button>
+            </div>
+            <div ng-repeat="comment in issue.comments | orderBy:'-upvotes'" class="col-xs-11 col-xs-offset-1 comments">
+                <div class="col-xs-12 posts">
+                    <h4>{{ comment.name }}:</h4>
+                    <p>{{ comment.message }}</p>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1 buttons">
+                    <button ng-click="commentUpvote(comment.pid, comment._id)" class="btn btn-sm btn-success" aria-label="Left Align"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> {{ comment.upvotes }}</span></button>
+                    <button ng-click="commentDownvote(comment.pid, comment._id)" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"> {{ comment.downvotes }}</span></button>
+                </div>
+            </div>
+            <div class="col-xs-11 col-xs-offset-1 new-comment">
+                <h4>Add a Comment</h4>
+                <input ng-model="issue.comments.name" type="text" class="form-control" placeholder="Your Name...">
+                <textarea ng-model="issue.comments.message" type="text" class="form-control" placeholder="Comment..."></textarea>
+                <button ng-click="addComment(issue._id, issue.comments.name, issue.comments.message)" class="btn btn-sm btn-primary">Submit</button>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

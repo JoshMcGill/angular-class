@@ -1,0 +1,91 @@
+body {
+    background-image: url('http://www.designbolts.com/wp-content/uploads/2012/12/Straws-Tileable-Pattern-For-Website-Background.jpg');
+}
+
+.navbar-default {
+    background-color: #4d8e27;
+    border-color: #594324;
+    color: #f5b700;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: cadetblue;
+}
+
+.navbar-default .navbar-brand {
+    color: #f5b700;
+}
+
+.navbar-default .navbar-brand {
+    color: #f5b700;   
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #f5b700;
+}
+
+.big-header {
+    text-align: center;
+    color: white;
+}
+
+.big-header2 {
+    text-align: center;
+    color: black;
+}
+
+.background-blue {
+    background-color: #176b86;
+    padding: 0px;
+    margin-bottom: 15px;
+    /*    border-radius: 15px;*/
+}
+
+.summoner {
+    margin: 0px;
+    margin-top: 0px;
+    display: inline;
+}
+
+.summoner img {
+    width: 250px;
+}
+
+.game {
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 0px;
+}
+
+.games {
+    -webkit-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 1);
+    box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 1);
+}
+
+.navbarshadow {
+    -webkit-box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 1);
+}
+
+.inset-shadow {
+    -webkit-box-shadow: inset 0px 0px 13px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px 0px 13px -2px rgba(0, 0, 0, 1);
+    box-shadow: inset 0px 0px 13px -2px rgba(0, 0, 0, 1);
+}
+
+.items{
+    height: 120px;
+}
+
+.items img{
+    width: 60px;
+    height: 60px;
+    margin:0px;
+    padding:0px;
+}
